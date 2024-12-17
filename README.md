@@ -3,6 +3,24 @@ a java spring clean start
 
 bare minimum REST api server.
 
+
+a test url target:
+`curl -X GET http://localhost:8080/api/piros`
+
+for creation
+```
+curl -X POST http://localhost:8080/api/piros -H "Content-Type: application/json" -d '{
+  "title": "Sample Title",
+  "description": "Sample Description",
+  "s3urltovideo": "http://example.com/video",
+  "imagename": "sample.jpg",
+  "location": "Sample Location",
+  "created": "2024-12-17T21:01:37.685"
+}'
+```
+
+and to delete one by Id: `curl -X DELETE http://localhost:8080/api/piros/1`
+
 piro360 data model...
 
 
