@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  piro360j:
+    image: piro360j:latest
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - h2-data:/data/h2
+    environment:
+      H2_DB_PATH: /data/h2
+      H2_DB_NAME: piro360j
+
+volumes:
+  h2-data:
+    driver: local
+  
