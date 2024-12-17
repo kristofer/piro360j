@@ -1,3 +1,12 @@
+FROM maven:3.8.4-openjdk-17-slim AS build
+# Set the working directory in the container
+WORKDIR /app
+# Copy the pom.xml and the project files to the container
+COPY pom.xml .
+COPY src ./src
+# Build the application using Maven
+RUN mvn clean package -DskipTests
+
 # Use an official OpenJDK runtime as a parent image
 FROM amazoncorretto:17
 
@@ -5,8 +14,8 @@ FROM amazoncorretto:17
 WORKDIR /app
 
 # Copy the application JAR file to the container
-COPY target/piro360j-0.0.1-SNAPSHOT.jar /app/piro360j.jar
-
+#COPY target/piro360j-0.0.1-SNAPSHOT.jar /app/piro360j.jar
+COPY --from=build /app/target/piro360j-0.0.1-SNAPSHOT.jar /app/piro360j.jar
 # Expose the port the application runs on
 EXPOSE 8080
 

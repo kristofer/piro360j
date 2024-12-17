@@ -3,6 +3,8 @@ a java spring clean start
 
 bare minimum REST api server.
 
+The h2 console: the connection url is `jdbc:h2:/data/h2/piro360j` (inside the container, without the suffixes)
+
 
 a test url target:
 `curl -X GET http://localhost:8080/api/piros`
