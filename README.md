@@ -1,7 +1,7 @@
 # piro360j
 a java spring clean start
 
-bare minimun REST api server.
+bare minimum REST api server.
 
 piro360 data model...
 
@@ -38,3 +38,8 @@ relationship ManyToMany {
   Tag{Piros} to Piro{Tags}
 }
 ```
+
+
+This is the Spring initializr URL I used to make the Spring Boot Start commit.
+
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.4.0&packaging=jar&jvmVersion=17&groupId=rocks.zipcode&artifactId=piro360j&name=piro360j&description=Piro360j%20project%20for%20Spring%20Boot&packageName=rocks.zipcode.piro360j&dependencies=web,devtools,docker-compose,session,data-jpa,h2
