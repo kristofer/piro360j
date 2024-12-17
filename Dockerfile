@@ -14,7 +14,6 @@ FROM amazoncorretto:17
 WORKDIR /app
 
 # Copy the application JAR file to the container
-#COPY target/piro360j-0.0.1-SNAPSHOT.jar /app/piro360j.jar
 COPY --from=build /app/target/piro360j-0.0.1-SNAPSHOT.jar /app/piro360j.jar
 # Expose the port the application runs on
 EXPOSE 8080
