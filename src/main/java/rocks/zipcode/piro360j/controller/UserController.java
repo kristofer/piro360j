@@ -8,7 +8,7 @@ import rocks.zipcode.piro360j.service.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/users/")
 public class UserController {
 
     @Autowired

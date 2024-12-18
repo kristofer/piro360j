@@ -8,7 +8,7 @@ import rocks.zipcode.piro360j.service.PiroService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/piros")
+@RequestMapping("/api/piros/")
 public class PiroController {
 
     @Autowired

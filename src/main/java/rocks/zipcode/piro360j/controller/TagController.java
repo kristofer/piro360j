@@ -8,7 +8,7 @@ import rocks.zipcode.piro360j.service.TagService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/tags")
+@RequestMapping("/api/tags/")
 public class TagController {
 
     @Autowired

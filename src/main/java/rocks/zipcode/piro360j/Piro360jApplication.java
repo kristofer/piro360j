@@ -19,7 +19,11 @@ public class Piro360jApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/*").allowedOrigins("http://localhost:9000");
+				registry.addMapping("/**") // Allow all paths
+                .allowedOrigins("*") // Allow all origins
+                .allowedMethods("*") // Allow all methods (GET, POST, PUT, etc.)
+                .allowedHeaders("*"); // Allow all headers
+				//registry.addMapping("/api/*").allowedOrigins("http://localhost:9000");
 			}
 		};
 	}
