@@ -1,7 +1,17 @@
 # piro360j
 a java spring clean start
 
-bare minimum REST api server.
+A bare minimum REST api server. 
+Was generated with the URL at the bottom of this page, on Spring Initializr.
+
+`mvn clean package` (to get the jar file)
+and/or
+`./mvnw spring-boot:run`
+
+the docker stuff should work as well. 
+`docker build -t piro360j .` (notice the DOT.)
+
+and then a `docker-compose up` _just be aware Docker on Mac is, um, a science-fair project on Mac, and doesn't seem to be very zippy._
 
 The h2 console: the connection url is `jdbc:h2:/data/h2/piro360j` (inside the container, without the suffixes)
 
